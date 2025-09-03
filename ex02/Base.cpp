@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 12:03:43 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/09/03 12:46:41 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/09/03 15:05:10 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Base::~Base()
 
 Base	*generate()
 {
-	int	rand(std::rand() % 3);
+	int	rand = std::rand() % 3;
 	switch (rand)
 	{
 		case 0:
