@@ -1,4 +1,4 @@
-NAME =	intern
+NAME =	base
 SRC =	main.cpp	Base.cpp
 OBJ = $(SRC:.cpp=.o)
 

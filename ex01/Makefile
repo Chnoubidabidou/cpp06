@@ -1,4 +1,4 @@
-NAME =	intern
+NAME =	serial
 SRC =	main.cpp	Serializer.cpp
 OBJ = $(SRC:.cpp=.o)
 

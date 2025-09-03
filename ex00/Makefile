@@ -1,4 +1,4 @@
-NAME =	intern
+NAME =	scalar
 SRC =	main.cpp	ScalarConverter.cpp
 OBJ = $(SRC:.cpp=.o)
 
