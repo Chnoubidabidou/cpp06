@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 12:03:43 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/09/03 12:05:50 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/09/03 12:46:41 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ Base::~Base()
 Base	*generate()
 {
 	int	rand(std::rand() % 3);
-	switch (rand) {
+	switch (rand)
+	{
 		case 0:
-			return new A();
+			return (new A());
 		case 1:
-			return new B();
+			return (new B());
 		default:
-			return new C();
+			return (new C());
 	}
 }
 
@@ -50,18 +51,22 @@ void	identify(Base &p)
 	{
 		(void)dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
-	} catch (...)
+	}
+	catch (...)
 	{
 		try
 		{
 			(void)dynamic_cast<B&>(p);
 			std::cout << "B" << std::endl;
-		} catch (...)
+		}
+		catch (...)
 		{
-			try {
+			try
+			{
 				(void)dynamic_cast<C&>(p);
 				std::cout << "C" << std::endl;
-			} catch (...)
+			}
+			catch (...)
 			{
 				std::cout << "Error: Cannot identify type." << std::endl;
 			}
