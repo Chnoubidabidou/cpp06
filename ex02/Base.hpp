@@ -6,12 +6,13 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 12:03:42 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/09/03 12:05:24 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/09/09 13:54:24 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+#include <ctime>
 #include <cstdlib>
 #include <iostream>
 
