@@ -6,15 +6,15 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 11:56:46 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/09/03 11:59:37 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/09/09 13:36:18 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-struct s_data
+typedef struct s_data
 {
 	int	x;
 	int	y;
 	int	z;
-}	typedef Data;
+}	Data;
