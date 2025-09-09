@@ -6,7 +6,7 @@
 /*   By: lgrisel <lgrisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 11:41:09 by lgrisel           #+#    #+#             */
-/*   Updated: 2025/09/03 12:06:10 by lgrisel          ###   ########.fr       */
+/*   Updated: 2025/09/09 13:25:32 by lgrisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,25 @@ void	ScalarConverter::convert(const std::string &input)
 	char				*end;
 	double				d;
 	long				l;
+
+	if (input.length() == 1 && !isdigit(input[0]))
+	{
+		char c = input[0];
+		if (isprint(c))
+			converted[0] << '\'' << c << '\'';
+		else
+			converted[0] << "Non displayable";
+
+		converted[1] << static_cast<int>(c);
+		converted[2] << std::fixed << std::setprecision(1) << static_cast<float>(c) << "f";
+		converted[3] << std::fixed << std::setprecision(1) << static_cast<double>(c);
+
+		std::cout << "char: " << converted[0].str() << std::endl;
+		std::cout << "int: " << converted[1].str() << std::endl;
+		std::cout << "float: " << converted[2].str() << std::endl;
+		std::cout << "double: " << converted[3].str() << std::endl;
+		return;
+	}
 
 	d = strtod(input.c_str(), &end);
 	l = static_cast<long>(d);
